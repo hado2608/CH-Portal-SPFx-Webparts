@@ -1,0 +1,87 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.buttons {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
+
+.button {
+  padding: 1em;
+  display: block;
+  text-decoration: none;
+  margin: 1em 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.1s;
+  font-family: inherit;
+  font-weight: 600;
+  color: #F5EDF2;
+  justify-content: center;
+}
+
+.berry {
+  background-color: #893B67;
+  color: #fff;
+  border-radius: 8px;
+
+}
+
+.kale {
+  background-color: #006747;
+  color: #fff;  
+  border-radius: 32px;
+
+}
+
+.kiwi {
+  background-color: #fff;
+  border: 1px solid #5B5F00;
+  color: #5B5F00;
+  border-radius: 32px;
+}
+
+.blueberry {
+  background-color: #fff;
+  border: 1px solid #445574;
+  color: #445574;
+  border-radius: 8px;
+
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+}

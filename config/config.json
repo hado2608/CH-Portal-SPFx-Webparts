@@ -1,0 +1,28 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "new-sp-fx-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/newSpFx/NewSpFxWebPart.js",
+          "manifest": "./src/webparts/newSpFx/NewSpFxWebPart.manifest.json"
+        }
+      ]
+    },
+    "buttons-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/buttons/ButtonsWebPart.js",
+          "manifest": "./src/webparts/buttons/ButtonsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "NewSpFxWebPartStrings": "lib/webparts/newSpFx/loc/{locale}.js",
+    "ButtonsWebPartStrings": "lib/webparts/buttons/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}
