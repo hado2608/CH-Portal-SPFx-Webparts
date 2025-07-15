@@ -17,12 +17,21 @@
           "manifest": "./src/webparts/buttons/ButtonsWebPart.manifest.json"
         }
       ]
+    },
+    "welcome-header-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/welcomeHeader/WelcomeHeaderWebPart.js",
+          "manifest": "./src/webparts/welcomeHeader/WelcomeHeaderWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "NewSpFxWebPartStrings": "lib/webparts/newSpFx/loc/{locale}.js",
     "ButtonsWebPartStrings": "lib/webparts/buttons/loc/{locale}.js",
-    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
+    "WelcomeHeaderWebPartStrings": "lib/webparts/welcomeHeader/loc/{locale}.js"
   }
 }
