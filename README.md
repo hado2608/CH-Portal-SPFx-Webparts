@@ -25,7 +25,7 @@ Short summary on functionality and used technologies.
 
 | Solution    | Author(s)                                               |
 | ----------- | ------------------------------------------------------- |
-| folder name | Ha Do (Product Design Intern)                           |
+| my-new-spfx | Ha Do (Product Design Intern)                           |
 
 ## Version history
 
