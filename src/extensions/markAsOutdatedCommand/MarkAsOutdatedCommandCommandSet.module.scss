@@ -1,0 +1,30 @@
+.ribbonButton {
+    background-color: #7bb144 !important;
+    color: #fff !important;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    height: 32px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .msButtonIcon {
+      color: #fff !important;
+      margin-right: 6px;
+    }
+  
+    .msButtonLabel {
+      color: #fff !important;
+    }
+  
+    &:hover {
+      background-color: #6ca53d !important;
+    }
+  
+    &:active {
+      background-color: #5a8d32 !important;
+    }
+  }
+  

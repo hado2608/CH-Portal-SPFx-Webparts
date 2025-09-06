@@ -1,0 +1,158 @@
+
+
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.slide {
+  position: relative;
+  display: none;
+  width: 100%;
+  // height: 350px;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+  position: relative;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.captionTwoColumn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.day {
+  font-size: 1.2rem;
+}
+
+.date {
+  font-size: 1.6rem;
+}
+
+.rightColumn {
+  text-align: right;
+  max-width: 65%;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.time, .location {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0 12px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  z-index: 2;
+  position: relative;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  // background-color: #bbb;
+  border-radius: 50%;
+  border: 1.5px solid #006747;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #006747;
+}
+
+.emptyState {
+  padding: 50px;
+  text-align: center;
+  background: #f3f3f3;
+  color: #777;
+  border-radius: 8px;
+}
+
+.heading{
+  color:#006747;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}

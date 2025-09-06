@@ -1,0 +1,159 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; // ✅ This removes default browser margin
+  width: 100%;
+}
+
+
+.popularFiles {
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 100%;
+}
+
+/* === 3D Card Wrapper === */
+.fileWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 100%; 
+}
+
+/* === Main Card === */
+.file3D {
+  display: block; // ✅ Fix: enables flex layout
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+
+  background-color: #fff;
+  border: 1px solid #006747;
+  color: #006747;
+  border-radius: 0.5em;
+  padding: 1em;
+
+  font-family: inherit;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  text-decoration: none;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  transition:
+    top 0.1s cubic-bezier(0.28, 0.32, 0.47, 0.99),
+    left 0.1s cubic-bezier(0.28, 0.32, 0.47, 0.99),
+    box-shadow 0.1s cubic-bezier(0.28, 0.32, 0.47, 0.99);
+
+  top: 0;
+  left: 0;
+}
+
+
+/* === Shadow Layer === */
+.fileShadow {
+  background-color: #006747;
+  border-radius: 0.5em;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  z-index: 1;
+  // transition: opacity 0.1s ease;
+}
+
+/* === 3D Hover Behavior === */
+.fileWrapper:hover .file3D,
+.fileWrapper:focus-within .file3D,
+.fileWrapper .file3D:active {
+  top: 0.5em;
+  left: 0.5em;
+}
+
+.fileWrapper:hover .fileShadow,
+.fileWrapper:focus-within .fileShadow,
+.fileWrapper .file3D:active ~ .fileShadow {
+  opacity: 0;
+}
+
+/* === Layout inside card === */
+.fileContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fileText {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* === Text Styles === */
+.fileName {
+  font-weight: bold;
+  flex: 0 0 350px;
+  font-size: 1em;
+  color: #006747;
+}
+
+.department {
+  flex: 1;
+  font-weight: 400;
+  font-size: 1em;
+  color: #006747;
+}
+
+
+/* === Column Labels === */
+.columnLabels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #015137;
+  
+}
+
+.columnLabels .nameLabel {
+  flex: 0 0 350px; // same as card layout
+}
+
+.columnLabels .deptLabel {
+  flex: 1;
+}
+
+.columnLabels .chevronPlaceholder {
+  width: 24px; // matches actual chevron icon size
+  flex-shrink: 0;
+}
+
+
+
+// /* === Optional Link Style Overrides === */
+// .links a {
+//   text-decoration: none;
+//   color: "[theme:link, default:#03787c]";
+//   color: var(--link);
+
+//   &:hover {
+//     text-decoration: underline;
+//     color: "[theme:linkHovered, default: #014446]";
+//     color: var(--linkHovered);
+//   }
+//   max-width: 100%;
+// }

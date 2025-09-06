@@ -2,14 +2,6 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
   "version": "2.0",
   "bundles": {
-    "new-sp-fx-web-part": {
-      "components": [
-        {
-          "entrypoint": "./lib/webparts/newSpFx/NewSpFxWebPart.js",
-          "manifest": "./src/webparts/newSpFx/NewSpFxWebPart.manifest.json"
-        }
-      ]
-    },
     "buttons-web-part": {
       "components": [
         {
@@ -25,13 +17,66 @@
           "manifest": "./src/webparts/welcomeHeader/WelcomeHeaderWebPart.manifest.json"
         }
       ]
+    },
+    "carousel-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/carousel/CarouselWebPart.js",
+          "manifest": "./src/webparts/carousel/CarouselWebPart.manifest.json"
+        }
+      ]
+    },
+    "popular-files-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/popularFiles/PopularFilesWebPart.js",
+          "manifest": "./src/webparts/popularFiles/PopularFilesWebPart.manifest.json"
+        }
+      ]
+    },
+    "section-title-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/sectionTitle/SectionTitleWebPart.js",
+          "manifest": "./src/webparts/sectionTitle/SectionTitleWebPart.manifest.json"
+        }
+      ]
+    },
+    "report-oudated-files-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/reportOudatedFiles/ReportOudatedFilesWebPart.js",
+          "manifest": "./src/webparts/reportOudatedFiles/ReportOudatedFilesWebPart.manifest.json"
+        }
+      ]
+    },
+    "mark-as-outdated-command-command-set": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/markAsOutdatedCommand/MarkAsOutdatedCommandCommandSet.js",
+          "manifest": "./src/extensions/markAsOutdatedCommand/MarkAsOutdatedCommandCommandSet.manifest.json"
+        }
+      ]
+    },
+    "contact-card-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/contactCard/ContactCardWebPart.js",
+          "manifest": "./src/webparts/contactCard/ContactCardWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "NewSpFxWebPartStrings": "lib/webparts/newSpFx/loc/{locale}.js",
     "ButtonsWebPartStrings": "lib/webparts/buttons/loc/{locale}.js",
     "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
-    "WelcomeHeaderWebPartStrings": "lib/webparts/welcomeHeader/loc/{locale}.js"
+    "WelcomeHeaderWebPartStrings": "lib/webparts/welcomeHeader/loc/{locale}.js",
+    "CarouselWebPartStrings": "lib/webparts/carousel/loc/{locale}.js",
+    "PopularFilesWebPartStrings": "lib/webparts/popularFiles/loc/{locale}.js",
+    "SectionTitleWebPartStrings": "lib/webparts/sectionTitle/loc/{locale}.js",
+    "ReportOudatedFilesWebPartStrings": "lib/webparts/reportOudatedFiles/loc/{locale}.js",
+    "MarkAsOutdatedCommandCommandSetStrings": "lib/extensions/markAsOutdatedCommand/loc/{locale}.js",
+    "ContactCardWebPartStrings": "lib/webparts/contactCard/loc/{locale}.js"
   }
 }

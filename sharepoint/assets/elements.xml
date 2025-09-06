@@ -1,0 +1,24 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+    Title="Mark As Outdated"
+    Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+    Sequence="100"
+    Id="MarkAsOutdatedCommand"
+    ClientSideComponentId="33127714-6e5a-43bc-b4a1-4f0adb64107c"
+    RegistrationId="101"
+    RegistrationType="List">
+    
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="CommandBar">
+          <Button
+            Id="MARK_AS_OUTDATED"
+            Command="MARK_AS_OUTDATED"
+            LabelText="Mark as Outdated"
+            Title="Mark selected files as outdated" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+    
+  </CustomAction>
+</Elements>

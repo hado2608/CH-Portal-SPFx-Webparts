@@ -10,78 +10,158 @@
   }
 }
 
-.welcome {
-  text-align: center;
+//3d effect
+.buttonWrapper {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
 }
 
-.welcomeImage {
+.button3D {
+  overflow: visible;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  margin: 0 0;
+  padding: 1em;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.1s cubic-bezier(0.28, 0.32, 0.47, 0.99),
+              box-shadow 0.1s cubic-bezier(0.28, 0.32, 0.47, 0.99);
+}
+
+.buttonShadow {
   width: 100%;
-  max-width: 420px;
+  height: 100%;
+  position: absolute;
+  overflow: visible;
+  top: .5em;
+  left: .5em;
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
+  z-index: -10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+// 3D effect on hover/focus/active
+.buttonWrapper:hover .button3D,
+.buttonWrapper:focus-within .button3D,
+.buttonWrapper .button3D:active {
+  top: 8px;
+  left: 8px;
+}
+.buttonWrapper:hover .buttonShadow,
+.buttonWrapper:focus-within .buttonShadow,
+.buttonWrapper .button3D:active ~ .buttonShadow {
+  opacity: 0;
 }
 
 .links {
   a {
     text-decoration: none;
     color: "[theme:link, default:#03787c]";
-    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
-
+    color: var(--link);
     &:hover {
       text-decoration: underline;
       color: "[theme:linkHovered, default: #014446]";
-      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+      color: var(--linkHovered);
     }
   }
 }
 
-.button {
-  padding: 1em;
-  display: block;
-  text-decoration: none;
-  margin: 1em 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.1s;
-  font-family: inherit;
-  font-weight: 600;
-  color: #F5EDF2;
-}
-
+//button type modifiers
 .berry {
+  padding: 1.5em;
   background-color: #893B67;
   color: #fff;
-  border-radius: 8px;
+  border-radius: .5em;
+}
 
+.berryShadow {
+  background-color: #FF90CE;
+  border-radius: .5em;
 }
 
 .kale {
   background-color: #006747;
   color: #fff;  
-  border-radius: 32px;
+  border-radius: 2em;
   text-align: center;
+}
+
+.kaleShadow {
+  background-color: #00A471;
+  border-radius: 2em;
 }
 
 .kiwi {
   background-color: #fff;
   border: 1px solid #5B5F00;
   color: #5B5F00;
-  border-radius: 32px;
+  border-radius: 2em;
   text-align: center;
+}
+
+.kiwiShadow {
+  background-color: #B5BD00;
+  border-radius: 2em;
 }
 
 .blueberry {
   background-color: #fff;
   border: 1px solid #445574;
   color: #445574;
-  border-radius: 8px;
+  border-radius: .5em;
   justify-content: left;
 }
 
+.blueberryShadow {
+  background-color: #54688B;
+  border-radius: .5em;
+}
+
+//input fields
 .title {
+  z-index: 3;
+  position: relative;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.125em;
 }
 
 .description {
+  z-index: 3;
+  font-size: 1.125em;
+  position: relative;
   font-weight: 400;
   font-size: 0.9em;
   margin-top: 0.5em;
+}
+
+/* === NEW: icon + text layout === */
+.content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex: 0 0 auto;
+  opacity: 0.95;
+}
+
+.iconFluent {
+  font-family: "FabricMDL2Icons";
+  font-size: 24px;
+  line-height: 1;
+  opacity: 0.95;
+  display: inline-block;
 }

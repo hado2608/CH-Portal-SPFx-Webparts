@@ -13,15 +13,25 @@
   },
   "dependencies": {
     "@fluentui/react": "^8.106.4",
+    "@microsoft/decorators": "1.21.1",
     "@microsoft/sp-component-base": "1.21.1",
     "@microsoft/sp-core-library": "1.21.1",
+    "@microsoft/sp-dialog": "1.21.1",
+    "@microsoft/sp-listview-extensibility": "1.21.1",
     "@microsoft/sp-lodash-subset": "1.21.1",
     "@microsoft/sp-office-ui-fabric-core": "1.21.1",
     "@microsoft/sp-property-pane": "1.21.1",
     "@microsoft/sp-webpart-base": "1.21.1",
-    "@pnp/spfx-property-controls": "^3.13.0",
+    "@pnp/common": "^2.15.0",
+    "@pnp/logging": "^2.15.0",
+    "@pnp/nodejs": "^2.15.0",
+    "@pnp/odata": "^2.15.0",
+    "@pnp/sp": "^2.15.0",
+    "@pnp/spfx-property-controls": "^3.21.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
     "tslib": "2.3.1"
   },
   "devDependencies": {
@@ -39,5 +49,11 @@
     "eslint-plugin-react-hooks": "4.3.0",
     "gulp": "4.0.2",
     "typescript": "~5.3.3"
+  },
+  "overrides": {
+    "@pnp/sp": "^2.15.0"
+  },
+  "resolutions": {
+    "@pnp/sp": "^2.15.0"
   }
 }

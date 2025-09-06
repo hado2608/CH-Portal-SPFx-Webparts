@@ -1,0 +1,102 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.contactCard {
+  font-family: 'Segoe UI Mono', monospace;
+  border: 1px solid #65A70B;
+  border-radius: 4px;
+  padding: 1rem;
+  gap: 16px;
+  box-sizing: border-box;
+  align-self: flex-start !important; // in case a parent Stack centers children
+}
+
+/* Large layout: left | divider | right */
+.large {
+  display: flex;
+  align-items: flex-start !important;
+
+  .leftCol,
+  .rightCol {
+    align-self: flex-start !important;
+  }
+
+  .divider {
+    align-self: stretch !important; /* match tallest column */
+    width: 1px;
+    background-color: rgba(75, 126, 8, 0.2);
+    margin: 0 16px;
+    height: auto;
+  }
+}
+
+/* Fixed left column so dividers line up */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  /* lock the width so all dividers align */
+  flex: 0 0 350px;   /* = width: 350px; no grow, no shrink */
+  max-width: 350px;
+}
+
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  flex: 1; /* take remaining space */
+}
+
+/* Small layout: stacked */
+.small {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  .divider {
+    display: none;
+  }
+}
+
+/* Text + link styling */
+.item {
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.rightCol > p,
+.leftCol > p {
+  margin: 0; /* avoid fake “centering” from default margins */
+}
+
+a {
+  font-weight: bold;
+  color: #3d760d;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 600px) {
+  .large {
+    flex-direction: column;
+  }
+
+  .leftCol {
+    flex: 0 0 auto;   /* unlock fixed width */
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .divider {
+    display: none !important;
+  }
+
+  .rightCol {
+    width: 100%;
+  }
+}

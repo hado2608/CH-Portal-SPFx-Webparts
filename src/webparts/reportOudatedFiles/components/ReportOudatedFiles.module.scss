@@ -1,0 +1,158 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  background: rgba(255, 255, 255, 0.85); // semi-transparent white
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px); // frosted glass effect
+  -webkit-backdrop-filter: blur(12px);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.popup h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+}
+
+.instructions {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.bullet {
+  margin-right: 6px;
+  line-height: 1;
+}
+
+.popup a {
+  color: #0078d4;
+  text-decoration: underline;
+}
+
+.button {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: #015137;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button:hover {
+  font-weight: bold;
+  background-color: #033323;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #666;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.closeBtn:hover {
+  color: #000;
+}
+
+.toast {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: #323130;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.toastClose {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.toastClose:hover {
+  color: #f5f5f5;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 12px 0;
+}
+
+.summary {
+  font-size: 14px;
+  color: #015137;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.recipients {
+  font-size: 10px;
+  color: #333;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.fileList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  max-height: 160px; // about 5 items worth of space
+  overflow-y: auto;
+}
+
+.fileItem {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.fileRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+  word-break: break-word;
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 16px;
+  cursor: pointer;
+  padding-left: 8px;
+
+  &:hover {
+    color: #d13438;
+  }
+}

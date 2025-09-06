@@ -1,4 +1,4 @@
-declare interface INewSpFxWebPartStrings {
+declare interface ICarouselWebPartStrings {
   PropertyPaneDescription: string;
   BasicGroupName: string;
   DescriptionFieldLabel: string;
@@ -13,7 +13,7 @@ declare interface INewSpFxWebPartStrings {
   UnknownEnvironment: string;
 }
 
-declare module 'NewSpFxWebPartStrings' {
-  const strings: INewSpFxWebPartStrings;
+declare module 'CarouselWebPartStrings' {
+  const strings: ICarouselWebPartStrings;
   export = strings;
 }

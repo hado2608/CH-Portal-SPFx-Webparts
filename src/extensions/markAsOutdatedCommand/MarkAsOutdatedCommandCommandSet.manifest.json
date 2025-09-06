@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/command-set-extension-manifest.schema.json",
+  "id": "33127714-6e5a-43bc-b4a1-4f0adb64107c",
+  "alias": "MarkAsOutdatedCommandCommandSet",
+  "componentType": "Extension",
+  "extensionType": "ListViewCommandSet",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "items": {
+    "MARK_AS_OUTDATED": {
+      "title": { "default": "Marking Mode" },
+      "iconImageUrl": "./icons/request.svg",
+      "type": "command"
+    }
+  }
+}

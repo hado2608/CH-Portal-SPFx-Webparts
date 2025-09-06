@@ -1,7 +1,8 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "my-new-spfx-client-side-solution",
+    "name": "portal-homepage-spfx-solution",
+    "title": "City Harvest Portal Homepage SPFx Solution",
     "id": "3e483a39-038b-4a9d-9775-ae463bcf4059",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
@@ -16,10 +17,10 @@
     },
     "metadata": {
       "shortDescription": {
-        "default": "my-new-spfx description"
+        "default": "portal-homepage-spfx-solution description"
       },
       "longDescription": {
-        "default": "my-new-spfx description"
+        "default": "portal-homepage-spfx-solution description"
       },
       "screenshotPaths": [],
       "videoUrl": "",
@@ -27,14 +28,20 @@
     },
     "features": [
       {
-        "title": "my-new-spfx Feature",
-        "description": "The feature that activates elements of the my-new-spfx solution.",
+        "title": "portal-homepage-spfx-solution Feature",
+        "description": "The feature that activates elements of the portal-homepage-spfx-solution solution.",
         "id": "562d2c41-d555-417f-bf3d-a4f72e8cdbd2",
-        "version": "1.0.0.0"
+        "version": "1.0.0.0",
+        "assets": {
+          "elementManifests": [
+            "elements.xml",
+            "ClientSideInstance.xml"
+          ]
+        }
       }
     ]
   },
   "paths": {
-    "zippedPackage": "solution/my-new-spfx.sppkg"
+    "zippedPackage": "solution/portal-homepage-spfx-solution.sppkg"
   }
 }
